@@ -1,19 +1,19 @@
 <script lang="ts">
-  // import { login } from '../../lib/stores/auth.js';
+  import { login } from '../../lib/stores/auth.js';
   import { goto } from "$app/navigation";
 
   let email = "";
   let password = "";
 
   function handleSubmit() {
-    // login(email, password);
+    login(email, password);
     goto("/protected");
   }
 </script>
 
 <div class="main-container min-h-screen flex items-center justify-center">
   <div class="w-[50%] space-y-8 p-8">
-    <h2 class="mt-6 text-left text-3xl text-white">Sign in to your account</h2>
+    <h2 class="mt-6 text-left text-3xl text-white bg-color-2">Sign in to your account</h2>
 
     <form class="mt-8 space-y-6" on:submit|preventDefault={handleSubmit}>
       <div class=" space-y-4">
